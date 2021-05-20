@@ -1,6 +1,7 @@
 //Selectors
 const addButton = document.getElementById("add-button");
 const productInput = document.getElementById("product-input");
+const headingTitle = document.getElementById("heading-tertiary");
 
 //Event Listener
 addButton.addEventListener("click", checkInputField);
@@ -11,6 +12,11 @@ function checkInputField(event) {
     event.preventDefault();
     const empt = productInput.value;
     if (empt !== "") {
-        getProduct();
+        getProductToBasket();
     } 
+}
+
+function getProductToBasket() {
+    //Remove heading <h3> in a basket because of a list of products
+    headingTitle.classList.add("hide");
 }
