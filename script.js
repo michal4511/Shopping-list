@@ -38,5 +38,7 @@ function getProductToBasket() {
     productDiv.appendChild(newPrice);
     //Append to basket list
     basketList.appendChild(productDiv);
-
+    //Clear Input Value
+    productInput.value="";
+    priceInput.value="";
 }
