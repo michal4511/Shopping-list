@@ -4,10 +4,13 @@ const productInput = document.getElementById("product-input");
 const headingTitle = document.getElementById("heading-tertiary");
 const priceInput = document.getElementById("price-input");
 const basketList = document.getElementById("basket-list");
+const resetBtn = document.getElementById("reset");
 const poundSign = String.fromCharCode('163');
 let price;
+
 //Event Listener
 addButton.addEventListener("click", checkInputField);
+resetBtn.addEventListener("click", removeProduct);
 
 //Function
 function checkInputField(event) {
@@ -51,4 +54,17 @@ function calculateTotalPrice(){
     let totalPrice = Number(document.getElementById("total-price").innerHTML);
     totalPrice= (totalPrice + price).toFixed(2);
     document.getElementById("total-price").innerHTML = totalPrice;
+}
+
+function removeProduct(){
+    while (basketList.firstChild) {
+        // Clean list
+        basketList.removeChild(basketList.lastChild);
+        // Show heading
+        headingTitle.classList.remove("hide");
+        // Score reset
+        totalPrice = parseInt(document.getElementById("total-price").innerHTML);
+        totalPrice = 0;
+        document.getElementById("total-price").innerHTML = totalPrice;
+    }
 }
