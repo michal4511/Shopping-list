@@ -50,3 +50,54 @@ main{
     justify-content: center;
     align-items: center;
 }
+
+/*---------------------------------*/
+/* HEADER */
+/*---------------------------------*/
+
+/*Main navi*/
+
+.logo {
+    margin-left: 3rem;
+    color: var(--color-tertiary-dark);
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--color-secondary);
+    background: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px
+}
+.main-nav {
+    list-style: none;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 7rem;
+    text-rendering: optimizeLegibility;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 3px 0;
+    color: var(--color-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid var(--color-tertiary);
+}
