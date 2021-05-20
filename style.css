@@ -90,7 +90,8 @@ h3{
 /*----- BUTTONS ------*/
 .btn{
     padding: 0.5rem 2rem;
-    margin-top: 3rem;
+    margin-top: 4.5rem;
+    margin-bottom: 2.5rem;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     border: none;
@@ -217,7 +218,7 @@ nav{
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: var(--color-secondary);
 }
 
