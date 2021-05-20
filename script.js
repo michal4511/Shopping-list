@@ -28,10 +28,13 @@ function getProductToBasket() {
     newProduct.innerText = productInput.value;
     newProduct.classList.add("product-item");
     productDiv.appendChild(newProduct);
+    //Two decimal places
+    const priceValue = Number(priceInput.value);
+    const price = priceValue.toFixed(2);
     //Create LI for price
     const newPrice = document.createElement("li");
     newPrice.classList.add("price-item");
-    newPrice.innerText = priceInput.value;
+    newPrice.innerText = price;
     productDiv.appendChild(newPrice);
     //Append to basket list
     basketList.appendChild(productDiv);
