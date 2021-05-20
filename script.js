@@ -4,6 +4,7 @@ const productInput = document.getElementById("product-input");
 const headingTitle = document.getElementById("heading-tertiary");
 const priceInput = document.getElementById("price-input");
 const basketList = document.getElementById("basket-list");
+let price;
 //Event Listener
 addButton.addEventListener("click", checkInputField);
 
@@ -30,7 +31,7 @@ function getProductToBasket() {
     productDiv.appendChild(newProduct);
     //Two decimal places
     const priceValue = Number(priceInput.value);
-    const price = priceValue.toFixed(2);
+    price = +(priceValue.toFixed(2));
     //Create LI for price
     const newPrice = document.createElement("li");
     newPrice.classList.add("price-item");
@@ -41,4 +42,12 @@ function getProductToBasket() {
     //Clear Input Value
     productInput.value="";
     priceInput.value="";
+    //Add price of product to final price
+    calculateTotalPrice();
+}
+
+function calculateTotalPrice(){
+    let totalPrice = Number(document.getElementById("total-price").innerHTML);
+    totalPrice= (totalPrice + price).toFixed(2);
+    document.getElementById("total-price").innerHTML = totalPrice;
 }
