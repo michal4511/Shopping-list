@@ -234,6 +234,18 @@ form input:focus{
     margin-bottom: 3rem;
 }
 
+/* Chrome, Safari, Edge, Opera */
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.price-input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /*----- BASKET ------*/
 .basket {
     display: flex;
