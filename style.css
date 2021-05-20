@@ -25,6 +25,22 @@ html{
     overflow-x: hidden;
 }
 
+@media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; 
+    } 
+}
+@media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; 
+    } 
+}
+@media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; 
+    } 
+}
+
 body{
     background: var(--color-secondary);
     box-sizing: border-box;
@@ -39,16 +55,6 @@ body{
 
 header{
     font-size: 2rem;
-}
-
-main{
-    max-width: 1140px;   
-    height: 100vh; 
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /*------ HEADINGS -------*/
@@ -137,6 +143,17 @@ h3{
     color: var(--color-tertiary-dark);
 }
 
+.menu-mobile {
+    margin-right: 3rem;
+    display: none;
+}
+
+@media only screen and (max-width: 56.25em){
+    .menu-mobile{
+        display: block;
+    }
+}
+
 nav{
     position: absolute;
     top: 0;
@@ -152,14 +169,27 @@ nav{
     font-weight: 300;
     letter-spacing: 1px
 }
+
 .main-nav {
     list-style: none;
+}
+
+@media only screen and (max-width: 56.25em){
+    .main-nav{
+        display: none;
+    }
 }
 
 .main-nav li {
     display: inline-block;
     margin-right: 7rem;
     text-rendering: optimizeLegibility;
+}
+
+@media only screen and (max-width: 56.25em){
+    .main-nav li{
+        margin-right: 1rem
+    }
 }
 
 .main-nav li a:link,
@@ -181,9 +211,21 @@ nav{
 /* SHOPPING LIST */
 /*---------------------------------*/
 .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
+    align-items: center;
     color: var(--color-secondary);
+}
+
+@media only screen and (max-width: 56.25em){
+    .container{
+        flex-direction: column;
+        margin-top: 12rem;
+    }
 }
 
 /*----- FORM ------*/
@@ -197,6 +239,13 @@ form{
     justify-content: center;
     align-items: center;
     background: var(--color-primary);
+}
+
+@media only screen and (max-width: 56.25em){
+    form{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
 }
 
 form span {
