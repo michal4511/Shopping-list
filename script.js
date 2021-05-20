@@ -19,4 +19,9 @@ function checkInputField(event) {
 function getProductToBasket() {
     //Remove heading <h3> in a basket because of a list of products
     headingTitle.classList.add("hide");
+        //Product Div
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product-in-basket")
+    
+
 }
