@@ -4,6 +4,7 @@ const productInput = document.getElementById("product-input");
 const headingTitle = document.getElementById("heading-tertiary");
 const priceInput = document.getElementById("price-input");
 const basketList = document.getElementById("basket-list");
+const poundSign = String.fromCharCode('163');
 let price;
 //Event Listener
 addButton.addEventListener("click", checkInputField);
@@ -35,7 +36,7 @@ function getProductToBasket() {
     //Create LI for price
     const newPrice = document.createElement("li");
     newPrice.classList.add("price-item");
-    newPrice.innerText = price;
+    newPrice.innerText = poundSign + price;
     productDiv.appendChild(newPrice);
     //Append to basket list
     basketList.appendChild(productDiv);
