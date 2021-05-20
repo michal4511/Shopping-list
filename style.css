@@ -1,0 +1,52 @@
+:root {
+    --color-primary: #1b2634;
+
+    --color-secondary: #F2EDE4;
+    --color-secondary-dark: #b4ab9b;
+
+    --color-tertiary: #ffd479;
+    --color-tertiary-dark: #d6a843;
+}
+
+/*---------------------------------*/
+/* BASIC SETUP */
+/*---------------------------------*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--color-secondary);
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::placeholder { 
+    color: var(--color-secondary);
+    opacity: 1; 
+    font-size: 1.3rem;
+  }
+
+header{
+    font-size: 2rem;
+}
+
+main{
+    max-width: 1140px;   
+    height: 100vh; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
